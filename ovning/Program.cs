@@ -9,11 +9,12 @@ namespace Ovning1
     {
 
         private string empName;
-        private string empPay;
+        private int empPay;
+        
 
         public void GetItemData()
         {
-            ShowList();
+            UpdateList();
         }
 
         private void ReadName()
@@ -30,17 +31,19 @@ namespace Ovning1
 
         private void UpdateList()
         {
-            int[] pay = [10];
+            int[] pay = new int[10]; ;
             for (int i = 0; i < pay.Length; i++)
             {
                 pay[i] = empPay;
+                 Console.WriteLine(pay[i]);
 
             }
 
-            string[] name = [""];
+            string[] name = new string[10]; ;
             for (int i = 0; i < pay.Length; i++)
             {
                 name[i] = empName;
+                Console.WriteLine(name[i]);
 
             }
 
@@ -52,10 +55,7 @@ namespace Ovning1
 
         }
 
-        private void ShowList()
-        {
-            Console.WriteLine(name[i], pay[i]);
-        }
+     
 
     }
 
